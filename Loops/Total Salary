@@ -1,0 +1,24 @@
+#include<iostream>
+using namespace std;
+
+int main() {
+	int b;
+    cin>>b;
+    char ch;
+    cin>>ch;
+    double hra,da,allow,pf;
+    hra=0.2*b;
+    da=0.5*b;
+    pf=0.11*b;
+    if(ch=='A')
+        allow=1700;
+    else if(ch=='B')
+         allow=1500;
+    else
+	{ allow=1300;}
+    double x=(b+hra+da+allow-pf);
+    if((x-(int)x)<0.5)
+        cout<<(int)x;
+    else cout<<((int)x+1);
+       
+}
