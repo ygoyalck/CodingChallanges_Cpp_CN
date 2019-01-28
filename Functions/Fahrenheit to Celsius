@@ -1,20 +1,16 @@
-bool checkMember(int n){
-int a=0,b=1,c=0;
-  
-  
-  for(;;){
-  
-     if(c<n){
-       c=a+b;
-       a=b;
-       b=c;
-     }
-   else if(c==n){
-      return true;
-    }
-    else if(c>n){
-      return false;
-    }
+
+
+void printTable(int start, int end, int step) 
+{
+  int x,i;
+  for(i=start;i<=end;i+=step)
+  {
+      x=((i-32)*(5))/9;
+      cout<<i<<"	"<<x; 
+      cout<<endl;
+
   }
-  }
-//can u see
+      
+}
+
+  
