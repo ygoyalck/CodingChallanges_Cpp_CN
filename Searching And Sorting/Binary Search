@@ -1,0 +1,27 @@
+// arr - input array
+// n - size of array
+// val - element to be searched
+int BinarySearch(int arr[], int n, int val)
+{	
+  int start,end,mid;
+ 
+  
+  start= 0;
+   end= n-1 ;
+  while(start<=end)
+  {
+   
+      mid=(start+end)/2; 
+    if(arr[mid]==val)
+      return mid;
+    else if (val>arr[mid])
+        start= mid+1 ;
+     else
+       end= mid-1 ;
+    
+ 
+  }  
+ 
+   if(start>end)
+   return -1;
+}
