@@ -1,0 +1,49 @@
+
+void findLargest(int arr[][1000], int row, int col){
+
+
+  /* Don't write main().
+   *  Don't read input, it is passed as function argument.
+   * Print output as specified in the question.
+   */
+  int sum;
+  int sumcol=0;
+  int sumrow=0;
+  int r=-1;
+  int colm=-1;
+for(int j=0;j<col;j++){
+    sum=0;
+    for(int i=0;i<row;i++){
+      sum=sum+arr[i][j];
+     
+    } 
+   if(sum>sumcol){
+        sumcol=sum;
+        colm=j;
+      }
+  }
+  for(int i=0;i<row;i++){
+    sum=0;
+    for(int j=0;j<col;j++){
+      sum=sum+arr[i][j];
+      
+      }
+    if(sum>sumrow){
+        sumrow=sum;
+        r=i;
+    }
+  }
+  if(sumrow >= sumcol){
+sum=sumrow;
+cout<<"row"<<" "<<r<<" "; 
+    }
+
+else{
+  sum=sumcol;
+cout<<"column"<<" "<<colm<<" ";
+  }
+  cout<<sum;
+}
+
+
+
