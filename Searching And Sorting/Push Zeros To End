@@ -1,0 +1,17 @@
+void PushZeroesEnd(int arr[], int n){
+// count zeros
+  int x=0;
+  int i;// index where i will put element
+  for(i=0;i<n;i++)
+  {
+    if(arr[i]!=0)
+     { arr[x]=arr[i];
+      x++;
+     }
+  }
+  for(int j=x;j<n;j++)
+  {
+    arr[j]=0;
+  }
+  
+}
