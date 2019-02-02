@@ -1,0 +1,21 @@
+// arr - input array
+// n - size of array
+void InsertionSort(int arr[], int n){
+	// Write your code here
+  for(int i=1;i<n;i++)
+  {
+    int j;
+    int k=arr[i];
+    for(j=0;j<i;j++)
+    {
+      if(arr[j]>arr[i])
+        break;
+    }
+    for(int k=i;k>=j;k--)
+    {
+      arr[k]=arr[k-1];
+    }
+    arr[j]=k;
+  }
+
+}
