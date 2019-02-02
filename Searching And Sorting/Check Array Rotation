@@ -1,0 +1,12 @@
+// arr - input array
+// n - size of array
+
+int FindSortedArrayRotation(int arr[], int n) {
+  int x=0;
+  for(int k=n-1;k>=1;k--)
+  {
+    if(arr[k]<arr[k-1])
+      return k;
+  }
+  return 0;
+}
