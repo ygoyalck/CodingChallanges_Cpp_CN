@@ -1,0 +1,11 @@
+## Read input as specified in the question.
+## Print output as specified in the question.
+str=input()
+l=str.split(" ")
+min=10000000
+str=""
+for i in l:
+  if len(i)<min:
+    min=len(i)
+    str=i
+print(str)
