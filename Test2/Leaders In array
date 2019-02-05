@@ -1,0 +1,11 @@
+n=int(input())
+l=[int(i) for i in input().strip().split(" ")]
+ans=[]
+ans.append(l[n-1])
+x=l[n-1]
+for i in range(n-2,-1,-1):
+  if l[i]>=x:
+    ans.append(l[i])
+    x=l[i]
+for i in range(len(ans)-1,-1,-1):
+  print(ans[i],end=" ")
