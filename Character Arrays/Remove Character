@@ -1,0 +1,16 @@
+// input - given string
+// You need to remove all occurrences of character c that are present in string input.
+// Change in the input itself. So no need to return or print anything.
+#include<bits/stdc++.h>
+void removeAllOccurrencesOfChar(char input[], char c) {
+   if(strlen(input)==0)
+     return;
+removeAllOccurrencesOfChar(input+1,c);
+  if(input[0]==c)
+  {
+    for(int i=0;i<strlen(input);i++)
+    {
+      input[i]=input[i+1];
+    }
+  }
+}
