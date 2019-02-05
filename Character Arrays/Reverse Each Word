@@ -1,0 +1,22 @@
+// input - given string
+// Update in the given input itself. No need to return or print anything
+#include<bits/stdc++.h>
+void reverseEachWord(char input[]) {
+    // Write your code here
+  int s=0;
+  int e=-1;
+for(int i=0;i<=strlen(input);i++)
+{
+  if(input[i]==' '  || input[i]=='\0')
+  {
+    e=i-1;
+    for(int j=s,k=e;j<k;j++,k--)
+    {
+      char a=input[j];
+      input[j]=input[k];
+      input[k]=a;
+    }
+    s=i+1;
+  }
+}
+}
