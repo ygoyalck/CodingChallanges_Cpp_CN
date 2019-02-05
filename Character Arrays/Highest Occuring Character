@@ -1,0 +1,22 @@
+// input - given string
+#include<bits/stdc++.h>
+char highestOccurringChar(char input[]) {
+   int s[26];
+  memset(s,0,sizeof(s));
+  for(int i=0;i<strlen(input);i++)
+  {
+    char c=input[i];
+    int k=c-'a';
+    s[k]++;
+  }
+  int max=-1;
+  char c;
+  for(int i=0;i<strlen(input);i++)
+  {
+    if(s[input[i]-'a']>max)
+     { max=s[input[i]-'a'];
+      c=input[i];
+     }
+  }
+return c;  
+}
